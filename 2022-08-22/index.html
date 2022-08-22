@@ -29,9 +29,9 @@
   <body>
     <canvas id="canvas" width="800" height="280"></canvas>
     <script type="module">
+      import data from "./logo.json" assert { type: "json" };
       import g from "./global.js";
       import { Rectangle, Circle, Arc, Triangle } from "./shape.js";
-      import data from "./logo.json" assert { type: "json" };
 
       window.onload = () => {
         g.ctx = document.getElementById("canvas").getContext("2d");
@@ -40,7 +40,7 @@
         let now;
         let then = Date.now();
         let delta;
-        const shapeType = [
+        const shapeTypes = [
           "rect",
           "arc-ul",
           "arc-ur",
@@ -76,8 +76,14 @@
 
             for (let i = 0; i < shapes.length; i++) {
               if (Math.random() < 0.2) {
-                let shapeIndex = Math.floor(Math.random() * (shapeType.length + 10));
-                let newShape = createShape(shapes[i].x, shapes[i].y, shapeType[shapeIndex]);
+                let shapeIndex = Math.floor(
+                  Math.random() * (shapeTypes.length + 10)
+                );
+                let newShape = createShape(
+                  shapes[i].x,
+                  shapes[i].y,
+                  shapeTypes[shapeIndex]
+                );
                 shapes.splice(i, 1, newShape);
               }
               shapes[i].draw();
