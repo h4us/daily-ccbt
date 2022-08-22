@@ -2,397 +2,221 @@
   {
     "x": 0,
     "y": 40,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 0,
     "y": 80,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 0,
     "y": 120,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 0,
     "y": 0,
-    "type": "arc-ul",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ul"
   },
   {
     "x": 40,
     "y": 160,
-    "type": "arc-ul",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ul"
   },
   {
     "x": 0,
     "y": 160,
-    "type": "arc-ll",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ll"
   },
   {
     "x": 40,
     "y": 0,
-    "type": "arc-ll",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ll"
   },
   {
     "x": 80,
     "y": 0,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 120,
     "y": 0,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 80,
     "y": 160,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 120,
     "y": 160,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 200,
     "y": 40,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 200,
     "y": 80,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 200,
     "y": 120,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 200,
     "y": 160,
-    "type": "arc-ur",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ur"
   },
   {
     "x": 240,
     "y": 0,
-    "type": "arc-ll",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ll"
   },
   {
     "x": 200,
     "y": 0,
-    "type": "arc-lr",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-lr"
   },
   {
     "x": 240,
     "y": 160,
-    "type": "arc-ul",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ul"
   },
   {
     "x": 280,
     "y": 0,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 320,
     "y": 0,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 280,
     "y": 160,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 320,
     "y": 160,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 400,
     "y": 0,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 400,
     "y": 40,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 400,
     "y": 120,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 400,
     "y": 160,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 440,
     "y": 0,
-    "type": "arc-ll",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ll"
   },
   {
     "x": 480,
     "y": 0,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 520,
     "y": 40,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 520,
     "y": 0,
-    "type": "arc-ur",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ur"
   },
   {
     "x": 440,
     "y": 80,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 480,
     "y": 80,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 520,
     "y": 120,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 480,
     "y": 160,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 520,
     "y": 160,
-    "type": "arc-lr",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-lr"
   },
   {
     "x": 440,
     "y": 160,
-    "type": "arc-ul",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ul"
   },
   {
     "x": 400,
     "y": 80,
-    "type": "tri-ur",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "tri-ur"
   },
   {
     "x": 600,
     "y": 0,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 640,
     "y": 0,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 680,
     "y": 0,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 640,
     "y": 80,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 640,
     "y": 120,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 640,
     "y": 160,
-    "type": "rect",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "rect"
   },
   {
     "x": 640,
     "y": 40,
-    "type": "arc-ul",
-    "color": "rgb(0, 0, 0)",
-    "angle": 0,
-    "hScale": 1,
-    "vScale": 1
+    "type": "arc-ul"
   }
 ]
