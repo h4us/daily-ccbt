@@ -1,0 +1,398 @@
+[
+  {
+    "x": 0,
+    "y": 40,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 0,
+    "y": 80,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 0,
+    "y": 120,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 0,
+    "y": 0,
+    "type": "arc-ul",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 40,
+    "y": 160,
+    "type": "arc-ul",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 0,
+    "y": 160,
+    "type": "arc-ll",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 40,
+    "y": 0,
+    "type": "arc-ll",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 80,
+    "y": 0,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 120,
+    "y": 0,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 80,
+    "y": 160,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 120,
+    "y": 160,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 200,
+    "y": 40,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 200,
+    "y": 80,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 200,
+    "y": 120,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 200,
+    "y": 160,
+    "type": "arc-ur",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 240,
+    "y": 0,
+    "type": "arc-ll",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 200,
+    "y": 0,
+    "type": "arc-lr",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 240,
+    "y": 160,
+    "type": "arc-ul",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 280,
+    "y": 0,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 320,
+    "y": 0,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 280,
+    "y": 160,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 320,
+    "y": 160,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 400,
+    "y": 0,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 400,
+    "y": 40,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 400,
+    "y": 120,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 400,
+    "y": 160,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 440,
+    "y": 0,
+    "type": "arc-ll",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 480,
+    "y": 0,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 520,
+    "y": 40,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 520,
+    "y": 0,
+    "type": "arc-ur",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 440,
+    "y": 80,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 480,
+    "y": 80,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 520,
+    "y": 120,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 480,
+    "y": 160,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 520,
+    "y": 160,
+    "type": "arc-lr",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 440,
+    "y": 160,
+    "type": "arc-ul",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 400,
+    "y": 80,
+    "type": "tri-ur",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 600,
+    "y": 0,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 640,
+    "y": 0,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 680,
+    "y": 0,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 640,
+    "y": 80,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 640,
+    "y": 120,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 640,
+    "y": 160,
+    "type": "rect",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  },
+  {
+    "x": 640,
+    "y": 40,
+    "type": "arc-ul",
+    "color": "rgb(0, 0, 0)",
+    "angle": 0,
+    "hScale": 1,
+    "vScale": 1
+  }
+]

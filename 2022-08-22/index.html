@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2022-08-22</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #canvas {
+        width: 800px;
+        height: 280px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="800" height="280"></canvas>
+    <script type="module">
+      import g from "./global.js";
+      import { Rectangle, Circle, Arc, Triangle } from "./shape.js";
+      import data from "./logo.json" assert { type: "json" };
+
+      window.onload = () => {
+        g.ctx = document.getElementById("canvas").getContext("2d");
+        let shapes = [];
+        let interval = 1000 / 25;
+        let now;
+        let then = Date.now();
+        let delta;
+        const shapeType = [
+          "rect",
+          "arc-ul",
+          "arc-ur",
+          "arc-lr",
+          "arc-ll",
+          "tri-ul",
+          "tri-ur",
+          "tri-lr",
+          "tri-ll",
+        ];
+
+        const update = () => {
+          now = Date.now();
+          delta = now - then;
+          if (delta > interval) {
+            g.ctx.clearRect(0, 0, g.WIDTH, g.HEIGHT);
+            g.ctx.strokeStyle = "rgb(127, 127, 127)";
+            g.ctx.lineWidth = 1;
+            for (let i = 0; i <= g.GRID_V; i++) {
+              g.ctx.beginPath();
+              g.ctx.moveTo(0, i * g.GRID_SIZE);
+              g.ctx.lineTo(g.WIDTH, i * g.GRID_SIZE);
+              g.ctx.stroke();
+              g.ctx.closePath();
+            }
+            for (let i = 0; i <= g.GRID_H; i++) {
+              g.ctx.beginPath();
+              g.ctx.moveTo(i * g.GRID_SIZE, 0);
+              g.ctx.lineTo(i * g.GRID_SIZE, g.HEIGHT);
+              g.ctx.stroke();
+              g.ctx.closePath();
+            }
+
+            for (let i = 0; i < shapes.length; i++) {
+              if (Math.random() < 0.2) {
+                let shapeIndex = Math.floor(Math.random() * (shapeType.length + 10));
+                let newShape = createShape(shapes[i].x, shapes[i].y, shapeType[shapeIndex]);
+                shapes.splice(i, 1, newShape);
+              }
+              shapes[i].draw();
+            }
+
+            then = now - (delta % interval);
+          }
+          requestAnimationFrame(update);
+        };
+
+        const createShape = (x, y, type) => {
+          let shape;
+          switch (type) {
+            case "rect":
+              shape = new Rectangle(x, y);
+              break;
+            case "arc-ul":
+              shape = new Arc(x, y);
+              break;
+            case "arc-ur":
+              shape = new Arc(x, y, Math.PI / 2);
+              break;
+            case "arc-ll":
+              shape = new Arc(x, y, -Math.PI / 2);
+              break;
+            case "arc-lr":
+              shape = new Arc(x, y, Math.PI);
+              break;
+            case "tri-ul":
+              shape = new Triangle(x, y);
+              break;
+            case "tri-ur":
+              shape = new Triangle(x, y, Math.PI / 2);
+              break;
+            case "tri-ll":
+              shape = new Triangle(x, y, -Math.PI / 2);
+              break;
+            case "tri-lr":
+              shape = new Triangle(x, y, Math.PI);
+              break;
+            default:
+              shape = new Rectangle(x, y);
+          }
+          return shape;
+        };
+
+        for (let i = 0; i < data.length; i++) {
+          const x = data[i].x + g.GRID_SIZE;
+          const y = data[i].y + g.GRID_SIZE;
+          const type = data[i].type;
+          shapes.push(createShape(x, y, type));
+        }
+
+        requestAnimationFrame(update);
+      };
+    </script>
+  </body>
+</html>
