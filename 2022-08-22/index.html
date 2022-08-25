@@ -29,7 +29,6 @@
   <body>
     <canvas id="canvas" width="800" height="280"></canvas>
     <script type="module">
-      import data from "./logo.json" assert { type: "json" };
       import g from "./global.js";
       import { Rectangle, Circle, Arc, Triangle } from "./shape.js";
 
@@ -130,14 +129,17 @@
           return shape;
         };
 
-        for (let i = 0; i < data.length; i++) {
-          const x = data[i].x + g.GRID_SIZE;
-          const y = data[i].y + g.GRID_SIZE;
-          const type = data[i].type;
-          shapes.push(createShape(x, y, type));
-        }
-
-        requestAnimationFrame(update);
+        fetch("./logo.json")
+          .then((response) => response.json())
+          .then((data) => {
+            for (let i = 0; i < data.length; i++) {
+              const x = data[i].x + g.GRID_SIZE;
+              const y = data[i].y + g.GRID_SIZE;
+              const type = data[i].type;
+              shapes.push(createShape(x, y, type));
+            }
+            requestAnimationFrame(update);
+          });
       };
     </script>
   </body>
