@@ -1,4 +1,4 @@
-<svg version="1.1" width="180" height="50" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" width="180" height="50" viewBox="0 0 180 50" xmlns="http://www.w3.org/2000/svg">
   <!-- C -->
   <path d="M 10 0 A 10 10 0 0 0 0 10 L 10 10" />
   <rect x="0" y="10" width="10" height="10" />
