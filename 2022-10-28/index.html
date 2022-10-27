@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=720, initial-scale=1.0" />
+    <title>2022-10-28</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      canvas {
+        width: 720px;
+        height: 200px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="720" height="200"></canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      const GRID_SIZE = 40;
+      const COLUMNS = 18;
+      const ROWS = 5;
+      let cells;
+
+      const randomize = () => {
+        cells = [];
+        for (let i = 0; i < COLUMNS; i++) {
+          cells[i] = [];
+          for (let j = 0; j < ROWS; j++) {
+            cells[i][j] = Math.round(Math.random());
+          }
+        }
+      };
+
+      const drawGrid = () => {
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = "black";
+
+        for (let i = 0; i <= COLUMNS; i++) {
+          ctx.beginPath();
+          ctx.moveTo(i * GRID_SIZE, 0);
+          ctx.lineTo(i * GRID_SIZE, ROWS * GRID_SIZE);
+          ctx.stroke();
+          for (let j = 0; j <= ROWS; j++) {
+            ctx.beginPath();
+            ctx.moveTo(0, j * GRID_SIZE);
+            ctx.lineTo(COLUMNS * GRID_SIZE, j * GRID_SIZE);
+            ctx.stroke();
+          }
+        }
+      };
+
+      const drawCells = () => {
+        ctx.fillStyle = "black";
+        for (let i = 0; i < COLUMNS; i++) {
+          for (let j = 0; j < ROWS; j++) {
+            if (cells[i][j] === 1) {
+              ctx.fillRect(i * GRID_SIZE, j * GRID_SIZE, GRID_SIZE, GRID_SIZE);
+            }
+          }
+        }
+      };
+
+      setInterval(() => {
+        ctx.clearRect(0, 0, COLUMNS * GRID_SIZE, ROWS * GRID_SIZE);
+        randomize();
+        drawGrid();
+        drawCells();
+      }, 60);
+    </script>
+  </body>
+</html>
