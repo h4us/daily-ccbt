@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=720" />
-    <title>2022-10-28</title>
+    <title>2022-10-29</title>
     <style>
       html,
       body {
@@ -34,15 +34,19 @@
       const COLUMNS = 18;
       const ROWS = 5;
       let cells;
+      let t = 0;
 
-      const randomize = () => {
+      const wave = () => {
         cells = [];
         for (let i = 0; i < COLUMNS; i++) {
           cells[i] = [];
           for (let j = 0; j < ROWS; j++) {
-            cells[i][j] = Math.round(Math.random());
+            let amp = Math.sin(4 * (i / COLUMNS) * Math.PI + t) * ROWS / 2 + 2;
+            let index = Math.round(amp);
+            cells[i][index] = 1;
           }
         }
+        t += 0.25;
       };
 
       const drawGrid = () => {
@@ -74,12 +78,24 @@
         }
       };
 
-      setInterval(() => {
-        ctx.clearRect(0, 0, COLUMNS * GRID_SIZE, ROWS * GRID_SIZE);
-        randomize();
-        drawGrid();
-        drawCells();
-      }, 60);
+      const FPS = 30;
+      let now;
+      let then = Date.now();
+      let interval = 1000 / FPS;
+      let delta;
+      const loop = () => {
+        now = Date.now();
+        delta = now - then;
+        if (delta > interval) {
+          ctx.clearRect(0, 0, COLUMNS * GRID_SIZE, ROWS * GRID_SIZE);
+          wave();
+          drawGrid();
+          drawCells();
+          then = now - (delta % interval);
+        }
+        requestAnimationFrame(loop);
+      };
+      loop();
     </script>
   </body>
 </html>
