@@ -36,7 +36,7 @@
       let cells;
       let t = 0;
 
-      const wave = () => {
+      const drawWave = () => {
         cells = [];
         for (let i = 0; i < COLUMNS; i++) {
           cells[i] = [];
@@ -88,8 +88,8 @@
         delta = now - then;
         if (delta > interval) {
           ctx.clearRect(0, 0, COLUMNS * GRID_SIZE, ROWS * GRID_SIZE);
-          wave();
           drawGrid();
+          drawWave();
           drawCells();
           then = now - (delta % interval);
         }
