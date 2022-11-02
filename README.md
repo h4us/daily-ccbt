@@ -7,3 +7,4 @@
 - [Matrix display](https://h4us.github.io/daily-ccbt/2022-10-27/)
 - [Randomize matrix display](https://h4us.github.io/daily-ccbt/2022-10-28/)
 - [Sine wave](https://h4us.github.io/daily-ccbt/2022-10-29/)
+- [Blink](https://h4us.github.io/daily-ccbt/2022-11-02/)
