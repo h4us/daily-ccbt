@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2023-04-13</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script type="module">
+      import g from "./global.js";
+      import { Rectangle, Circle, Arc, Triangle } from "./shape.js";
+      const canvas = document.getElementById("canvas");
+      g.ctx = canvas.getContext("2d");
+      let cells;
+      let t = 0;
+
+      // Need to debounce
+      window.addEventListener("resize", () => {
+        adjustSize();
+      });
+
+      const setupCells = () => {
+        cells = [];
+        for (let i = 0; i < g.GRID_COLUMNS; i++) {
+          cells[i] = [];
+          for (let j = 0; j < g.GRID_ROWS; j++) {
+            cells[i][j] = null;
+          }
+        }
+      };
+
+      const adjustSize = () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerWidth / 3.6;
+        g.GRID_SIZE = canvas.width / g.GRID_COLUMNS;
+      };
+
+      let count = 0;
+      const updateCells = (timestamp) => {
+        if (count < 50) {
+          cells[7][0] = "tri-ur";
+          cells[7][1] = "rect";
+          cells[7][2] = "rect";
+          cells[7][3] = "arc-ll";
+          cells[8][1] = "rect";
+          cells[8][2] = null;
+          cells[8][3] = "rect";
+          cells[9][1] = "rect";
+          cells[9][2] = "rect";
+          cells[9][3] = "rect";
+          cells[10][1] = "rect";
+          cells[10][2] = null;
+          cells[10][3] = "rect";
+          cells[11][0] = "tri-ul";
+          cells[11][1] = "rect";
+          cells[11][2] = "rect";
+          cells[11][3] = "arc-lr";
+        } else {
+          cells[7][0] = "tri-ur";
+          cells[7][1] = "rect";
+          cells[7][2] = "rect";
+          cells[7][3] = "arc-ll";
+          cells[8][1] = "rect";
+          cells[8][2] = "rect";
+          cells[8][3] = "rect";
+          cells[9][1] = "rect";
+          cells[9][2] = "rect";
+          cells[9][3] = "rect";
+          cells[10][1] = "rect";
+          cells[10][2] = "rect";
+          cells[10][3] = "rect";
+          cells[11][0] = "tri-ul";
+          cells[11][1] = "rect";
+          cells[11][2] = "rect";
+          cells[11][3] = "arc-lr";
+        }
+        count = (count + 1) % 60;
+      };
+
+      const drawGrid = () => {
+        g.ctx.lineWidth = 1;
+        g.ctx.strokeStyle = "black";
+
+        for (let i = 0; i <= g.GRID_COLUMNS; i++) {
+          g.ctx.beginPath();
+          g.ctx.moveTo(i * g.GRID_SIZE, 0);
+          g.ctx.lineTo(i * g.GRID_SIZE, g.GRID_ROWS * g.GRID_SIZE);
+          g.ctx.stroke();
+          for (let j = 0; j <= g.GRID_ROWS; j++) {
+            g.ctx.beginPath();
+            g.ctx.moveTo(0, j * g.GRID_SIZE);
+            g.ctx.lineTo(g.GRID_COLUMNS * g.GRID_SIZE, j * g.GRID_SIZE);
+            g.ctx.stroke();
+          }
+        }
+      };
+
+      const drawCells = () => {
+        for (let i = 0; i < g.GRID_COLUMNS; i++) {
+          for (let j = 0; j < g.GRID_ROWS; j++) {
+            g.ctx.save();
+            switch (cells[i][j]) {
+              case "rect":
+                g.ctx.fillRect(
+                  i * g.GRID_SIZE,
+                  j * g.GRID_SIZE,
+                  g.GRID_SIZE,
+                  g.GRID_SIZE
+                );
+                break;
+              case "arc-lr":
+                g.ctx.beginPath();
+                g.ctx.ellipse(
+                  i * g.GRID_SIZE,
+                  j * g.GRID_SIZE,
+                  g.GRID_SIZE,
+                  g.GRID_SIZE,
+                  0,
+                  0,
+                  Math.PI / 2,
+                  0
+                );
+                g.ctx.lineTo(i * g.GRID_SIZE, j * g.GRID_SIZE);
+                g.ctx.fill();
+                break;
+              case "arc-ll":
+                g.ctx.beginPath();
+                g.ctx.ellipse(
+                  i * g.GRID_SIZE + g.GRID_SIZE,
+                  j * g.GRID_SIZE,
+                  g.GRID_SIZE,
+                  g.GRID_SIZE,
+                  0,
+                  Math.PI / 2,
+                  Math.PI,
+                  0
+                );
+                g.ctx.lineTo(i * g.GRID_SIZE + g.GRID_SIZE, j * g.GRID_SIZE);
+                g.ctx.fill();
+                break;
+              case "tri-ur":
+                g.ctx.beginPath();
+                g.ctx.lineTo(i * g.GRID_SIZE, j * g.GRID_SIZE);
+                g.ctx.lineTo(
+                  i * g.GRID_SIZE + g.GRID_SIZE,
+                  j * g.GRID_SIZE + g.GRID_SIZE
+                );
+                g.ctx.lineTo(i * g.GRID_SIZE, j * g.GRID_SIZE + g.GRID_SIZE);
+                g.ctx.fill();
+                break;
+              case "tri-ul":
+                g.ctx.beginPath();
+                g.ctx.lineTo(i * g.GRID_SIZE + g.GRID_SIZE, j * g.GRID_SIZE);
+                g.ctx.lineTo(
+                  i * g.GRID_SIZE + g.GRID_SIZE,
+                  j * g.GRID_SIZE + g.GRID_SIZE
+                );
+                g.ctx.lineTo(i * g.GRID_SIZE, j * g.GRID_SIZE + g.GRID_SIZE);
+                g.ctx.fill();
+                break;
+            }
+            g.ctx.restore();
+          }
+        }
+      };
+
+      const FPS = 30;
+      let now;
+      let then = Date.now();
+      let interval = 1000 / FPS;
+      let delta;
+      const loop = (timestamp) => {
+        now = Date.now();
+        delta = now - then;
+        if (delta > interval) {
+          g.ctx.clearRect(
+            0,
+            0,
+            g.GRID_COLUMNS * g.GRID_SIZE,
+            g.GRID_ROWS * g.GRID_SIZE
+          );
+          drawGrid();
+          updateCells(timestamp);
+          drawCells();
+          then = now - (delta % interval);
+        }
+        requestAnimationFrame(loop);
+      };
+
+      setupCells();
+      adjustSize();
+      loop();
+    </script>
+  </body>
+</html>
